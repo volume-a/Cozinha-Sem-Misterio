@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cozinha Fácil | 30 Receitas Doces e Salgadas</title>
+<meta name="description" content="Descubra 30 receitas doces e salgadas práticas, com dois bônus para ajudar você a organizar sua cozinha e acertar as medidas.">
+<meta name="theme-color" content="#d9d9d9">
+<meta property="og:title" content="Cozinha Fácil | 30 Receitas Doces e Salgadas">
+<meta property="og:description" content="30 receitas doces e salgadas práticas + 2 bônus para organizar sua cozinha e acertar as medidas.">
+<meta property="og:image" content="assets/hero_table.png">
+<!-- Fontes externas (Google Fonts). Se falharem, o site usa as fontes do sistema. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* =====================================================================
+   TOKENS — derivados do Hanzo Design System
+   (page field #d9d9d9 · raised surface #fff · ink #000 · accent #ff3700
+    · dark frame #262626 · secondary text 50% black · ring 8px white 25%)
+   ===================================================================== */
+:root{
+  --field:#d9d9d9;
+  --surface:#ffffff;
+  --ink:#000000;
+  --ink-2:rgba(0,0,0,.5);
+  --ink-3:rgba(0,0,0,.62);
+  --accent:#ff3700;
+  --btn-accent:#e6e6e6;      /* cinza claro — usado nos botões */
+  --btn-accent-hover:#d4d4d4;
+  --status:#0cb300;
+  --dark:#262626;
+  --glass:rgba(255,255,255,.5);
+  --divider:rgba(0,0,0,.25);
+  --hairline:rgba(0,0,0,.1);
+  --ring:0 0 0 8px rgba(255,255,255,.25);
+  --shadow:0 0 0 8px rgba(255,255,255,.25), 12px 16px 16px rgba(0,0,0,.1);
+  --shadow-lg:0 0 0 8px rgba(255,255,255,.25), 24px 32px 48px rgba(0,0,0,.16);
+  --r-sm:16px; --r-md:24px; --r-lg:32px; --r-pill:999px;
+  --sans:"Inter Display","Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --ease:cubic-bezier(.44,0,.56,1);
+  --wrap:1240px;
+  --pad:clamp(16px,4vw,48px);
+  --nav-h:76px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--field);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;
+  letter-spacing:-.01em;font-feature-settings:"salt" on;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+/* luz diagonal do Design System (raios brancos sobre o campo cinza) */
+body::before{content:"";position:fixed;inset:-20% -10% auto -10%;height:140vh;pointer-events:none;z-index:-1;
+  background:
+    linear-gradient(115deg,transparent 18%,var(--glass) 28%,transparent 40%),
+    linear-gradient(115deg,transparent 46%,rgba(255,255,255,.35) 54%,transparent 64%),
+    linear-gradient(180deg,#e6e6e6 0%,var(--field) 100%)}
+::selection{background:var(--accent);color:#000}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.05em;line-height:1.1}
+p{margin:0}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.section{padding:clamp(72px,10vw,140px) 0}
+.tone{color:var(--ink-2)}
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:12px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:#000;color:#fff;padding:10px 16px;border-radius:12px;text-decoration:none}
+.skip:focus{top:12px}
+
+/* ---------- Tipografia ---------- */
+.h1{font-size:clamp(40px,7.2vw,96px);letter-spacing:-.06em;line-height:1.02}
+.h2{font-size:clamp(32px,4.6vw,56px);letter-spacing:-.055em;line-height:1.08}
+.h3{font-size:clamp(19px,1.8vw,24px);letter-spacing:-.03em;line-height:1.3}
+.lead{font-size:clamp(18px,1.7vw,22px);line-height:1.5;color:var(--ink-3);letter-spacing:-.02em}
+.body-2{color:var(--ink-3)}
+/* eyebrow: Instrument Serif itálico com réguas que desaparecem nas pontas */
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font:italic 400 24px/1 var(--serif);letter-spacing:0;color:var(--ink-2);margin-bottom:18px}
+.eyebrow::before,.eyebrow::after{content:"";width:48px;height:1px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.35))}
+.eyebrow::after{transform:scaleX(-1)}
+.eyebrow.left::before{display:none}
+.head{max-width:820px;margin:0 auto clamp(40px,6vw,72px);text-align:center}
+.head .lead{margin-top:18px}
+
+/* ---------- Botões (pílula preta / branca do DS) ---------- */
+.btn{--bg:var(--ink);--fg:#fff;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  min-height:56px;padding:0 10px 0 26px;border:0;border-radius:var(--r-pill);background:var(--bg);color:var(--fg);
+  font:500 15px/1.2 var(--sans);letter-spacing:.01em;text-transform:uppercase;text-decoration:none;cursor:pointer;
+  box-shadow:var(--ring);transition:transform .35s var(--ease),box-shadow .35s var(--ease),background-color .25s}
+.btn .ico{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--btn-accent);color:#000;flex:none;
+  transition:transform .35s var(--ease),background-color .25s}
+.btn .ico svg{width:18px;height:18px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 0 8px rgba(255,255,255,.4),0 14px 28px rgba(0,0,0,.18)}
+.btn:hover .ico{transform:rotate(-45deg);background:var(--btn-accent-hover)}
+.btn:active{transform:translateY(0)}
+.btn.light{--bg:#fff;--fg:#000}
+.btn.sm{min-height:44px;padding:0 8px 0 18px;font-size:13px}
+.btn.sm .ico{width:30px;height:30px}
+.btn.block{width:100%}
+.btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:var(--r-pill);background:#fff;font-size:14px;
+  letter-spacing:-.01em;box-shadow:var(--ring)}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--status);box-shadow:0 0 0 4px rgba(12,179,0,.18)}
+.pill.dark{background:var(--dark);color:#fff;box-shadow:0 0 0 8px rgba(255,255,255,.18)}
+
+/* ---------- Cartões (superfície branca + anel 8px) ---------- */
+.card{background:var(--surface);border-radius:var(--r-md);box-shadow:var(--shadow);padding:clamp(22px,2.6vw,32px)}
+
+/* =====================================================================
+   CABEÇALHO
+   ===================================================================== */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--nav-h);display:flex;align-items:center;
+  transition:background-color .3s,backdrop-filter .3s}
+.nav.scrolled{background:rgba(217,217,217,.72);-webkit-backdrop-filter:blur(16px) saturate(1.2);backdrop-filter:blur(16px) saturate(1.2);
+  box-shadow:0 1px 0 var(--hairline)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 18px 0 8px;border-radius:22px;background:#fff;
+  text-decoration:none;font-weight:600;letter-spacing:-.04em;font-size:17px;box-shadow:var(--ring)}
+.brand-mark{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#000;color:#fff}
+.brand-mark svg{width:16px;height:16px}
+.nav-links{display:flex;align-items:center;gap:8px;list-style:none;margin:0;padding:0}
+.nav-links a{display:inline-flex;align-items:center;height:44px;padding:0 18px;border-radius:22px;background:#fff;text-decoration:none;
+  font-size:15px;transition:background-color .25s,color .25s}
+.nav-links a:hover{background:#000;color:#fff}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.menu-btn{display:none;width:48px;height:48px;border-radius:50%;border:0;background:#fff;cursor:pointer;position:relative;box-shadow:var(--ring)}
+.menu-btn span{position:absolute;left:15px;right:15px;height:2px;border-radius:10px;background:#000;transition:transform .35s var(--ease),top .35s var(--ease)}
+.menu-btn span:nth-child(1){top:19px}.menu-btn span:nth-child(2){top:27px}
+.menu-btn[aria-expanded="true"] span:nth-child(1){top:23px;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:nth-child(2){top:23px;transform:rotate(-45deg)}
+.mobile-panel{position:fixed;top:calc(var(--nav-h) + 4px);left:12px;right:12px;z-index:49;padding:12px;border-radius:var(--r-md);
+  background:rgba(12,12,12,.9);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);box-shadow:0 0 0 8px rgba(255,255,255,.25);
+  opacity:0;transform:translateY(-12px);pointer-events:none;visibility:hidden;transition:opacity .3s,transform .35s var(--ease),visibility .3s}
+.mobile-panel.open{opacity:1;transform:none;pointer-events:auto;visibility:visible}
+.mobile-panel a.link{display:block;padding:16px 18px;border-radius:16px;color:#fff;text-decoration:none;font-size:20px;letter-spacing:-.03em}
+.mobile-panel a.link:hover{background:rgba(255,255,255,.1)}
+.mobile-panel .btn{margin-top:8px}
+
+/* =====================================================================
+   HERO
+   ===================================================================== */
+.hero{padding:calc(var(--nav-h) + clamp(28px,5vw,64px)) 0 clamp(56px,8vw,110px)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{margin:22px 0 22px}
+.hero .lead{max-width:560px}
+.benefits{list-style:none;padding:0;margin:28px 0 30px;display:flex;flex-wrap:wrap;gap:10px}
+.benefits li{display:inline-flex;align-items:center;gap:10px;padding:10px 16px 10px 10px;background:#fff;border-radius:var(--r-pill);
+  font-size:15px;box-shadow:var(--ring)}
+.benefits .n{display:grid;place-items:center;min-width:30px;height:30px;padding:0 6px;border-radius:15px;background:#000;color:#fff;font-size:13px;font-weight:500}
+.price-row{display:flex;align-items:center;flex-wrap:wrap;gap:18px 26px}
+.price{display:flex;flex-direction:column;line-height:1}
+.price .old{font-size:16px;color:var(--ink-2);text-decoration:line-through;text-decoration-color:var(--accent);text-decoration-thickness:2px;margin-bottom:6px}
+.price .now{font-weight:300;font-size:clamp(44px,5vw,64px);letter-spacing:-.06em}
+.price .now small{font-size:.42em;letter-spacing:-.02em;margin-right:4px;vertical-align:.7em;font-weight:400}
+.price .note{font-size:13px;color:var(--ink-2);margin-top:8px;letter-spacing:0}
+
+.hero-visual{position:relative;aspect-ratio:4/4.6;max-width:560px;justify-self:center;width:100%}
+.hero-photo{position:absolute;inset:0 0 12% 10%;border-radius:var(--r-lg);overflow:hidden;background:var(--dark);box-shadow:var(--shadow-lg)}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(255,255,255,.18),transparent 40%,rgba(0,0,0,.25))}
+/* mockup da coleção: capa + lombada + sombra de contato */
+.mockup{position:absolute;left:0;bottom:0;width:46%;perspective:1200px;filter:drop-shadow(24px 34px 30px rgba(0,0,0,.28))}
+.mockup .book{position:relative;transform:rotateY(18deg) rotateZ(-5deg);transform-style:preserve-3d;transition:transform .6s var(--ease);
+  border-radius:6px 14px 14px 6px;overflow:hidden;background:#eee}
+.mockup:hover .book{transform:rotateY(8deg) rotateZ(-3deg)}
+.mockup .book img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.mockup .book::before{content:"";position:absolute;inset:0 auto 0 0;width:14px;z-index:2;
+  background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(255,255,255,.25) 45%,rgba(0,0,0,.08))}
+.mockup .book::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.35),transparent 35%)}
+.sticker{position:absolute;right:-4px;top:8%;z-index:3;background:#fff;border-radius:var(--r-sm);padding:14px 18px;box-shadow:var(--shadow);
+  transform:rotate(5deg);text-align:center}
+.sticker b{display:block;font-weight:300;font-size:44px;letter-spacing:-.06em;line-height:1}
+.sticker span{font:italic 18px/1.1 var(--serif);color:var(--ink-2)}
+.sticker2{top:auto;bottom:22%;right:-8px;transform:rotate(-4deg);display:flex;align-items:center;gap:10px;padding:12px 16px;text-align:left}
+.sticker2 .ico{width:36px;height:36px;border-radius:50%;background:var(--accent);display:grid;place-items:center}
+.sticker2 small{display:block;font-size:13px;color:var(--ink-2)}
+.sticker2 strong{font-weight:500;letter-spacing:-.02em}
+
+/* =====================================================================
+   OFERTA + CRONÔMETRO (moldura escura do DS)
+   ===================================================================== */
+.offer{padding:0 0 clamp(72px,10vw,120px)}
+.offer-box{position:relative;overflow:hidden;background:var(--dark);color:#fff;border-radius:var(--r-lg);padding:clamp(28px,4.5vw,56px);
+  box-shadow:var(--shadow-lg);display:grid;grid-template-columns:1.1fr auto;gap:clamp(24px,4vw,56px);align-items:center}
+.offer-box::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(600px 300px at 90% -10%,rgba(255,55,0,.35),transparent 60%),linear-gradient(115deg,transparent 30%,rgba(255,255,255,.06) 45%,transparent 60%)}
+.offer-box > *{position:relative}
+.offer-box .eyebrow{color:rgba(255,255,255,.6)}
+.offer-box .eyebrow::before,.offer-box .eyebrow::after{background:linear-gradient(90deg,transparent,rgba(255,255,255,.4))}
+.offer-box .h2{font-size:clamp(28px,3.6vw,44px)}
+.offer-box .body-2{color:rgba(255,255,255,.7);margin-top:12px;max-width:520px}
+.timer-side{display:flex;flex-direction:column;align-items:center;gap:20px}
+.timer{display:flex;align-items:center;gap:10px}
+.timer .unit{display:flex;flex-direction:column;align-items:center;gap:8px}
+.timer .digits{min-width:clamp(92px,11vw,124px);padding:16px 12px;background:#fff;color:#000;border-radius:var(--r-sm);text-align:center;
+  font-weight:300;font-size:clamp(48px,6vw,72px);line-height:1;letter-spacing:-.05em;font-variant-numeric:tabular-nums;
+  box-shadow:0 0 0 8px rgba(255,255,255,.18)}
+.timer .unit:first-child .digits{transform:rotate(-3deg)}
+.timer .unit:last-child .digits{transform:rotate(3deg)}
+.timer .lbl{font:italic 18px/1 var(--serif);color:rgba(255,255,255,.6)}
+.timer .sep{font-size:44px;font-weight:300;color:rgba(255,255,255,.5);margin-bottom:28px}
+.offer-price{display:flex;align-items:baseline;gap:14px}
+.offer-price .old{color:rgba(255,255,255,.55);text-decoration:line-through;text-decoration-color:var(--accent)}
+.offer-price .now{font-weight:300;font-size:40px;letter-spacing:-.05em}
+.timer-msg{font-size:14px;color:rgba(255,255,255,.7);text-align:center;max-width:320px}
+.is-expired .timer .digits{color:rgba(0,0,0,.4)}
+.demo-tag{display:inline-block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:8px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.75)}
+
+/* =====================================================================
+   IDENTIFICAÇÃO
+   ===================================================================== */
+.pains{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.pain{background:#fff;border-radius:var(--r-md);padding:26px 22px 24px;box-shadow:var(--shadow);transition:transform .45s var(--ease)}
+.pain:nth-child(odd){transform:rotate(-2deg)}
+.pain:nth-child(even){transform:rotate(2deg) translateY(16px)}
+.pain:hover{transform:rotate(0) translateY(-4px)}
+.pain .q{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--field);margin-bottom:34px}
+.pain .q svg{width:22px;height:22px}
+.pain p{font-size:18px;letter-spacing:-.03em;line-height:1.35}
+.closing{max-width:900px;margin:clamp(56px,7vw,88px) auto 0;text-align:center;font-size:clamp(24px,3vw,38px);letter-spacing:-.045em;line-height:1.3}
+.closing em{font-family:var(--serif);font-style:italic;letter-spacing:-.01em}
+
+/* =====================================================================
+   GRADES DE RECEITAS
+   ===================================================================== */
+.recipes-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(32px,5vw,56px)}
+.recipes-head .h2{max-width:720px}
+.count{display:flex;align-items:baseline;gap:8px;flex:none}
+.count b{font-weight:300;font-size:clamp(64px,8vw,112px);letter-spacing:-.07em;line-height:.9}
+.count span{font:italic 22px/1.1 var(--serif);color:var(--ink-2);max-width:110px}
+.grid{display:grid;gap:20px}
+.grid.savory{grid-template-columns:repeat(4,1fr)}
+.grid.sweet{grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:auto auto}
+.dish{position:relative;margin:0;border-radius:var(--r-md);overflow:hidden;background:var(--dark);box-shadow:var(--shadow);isolation:isolate;min-height:280px}
+.dish img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform 1.2s var(--ease)}
+.dish:hover img{transform:scale(1.06)}
+.dish::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.72));z-index:1}
+.dish figcaption{position:absolute;left:16px;right:16px;bottom:16px;z-index:2;color:#fff}
+.dish figcaption .tag{display:inline-block;font:italic 17px/1 var(--serif);opacity:.85;margin-bottom:6px}
+.dish figcaption strong{display:block;font-weight:400;font-size:20px;letter-spacing:-.03em;line-height:1.2}
+.grid.savory .dish{aspect-ratio:3/4}
+.grid.savory .dish:nth-child(even){transform:translateY(28px)}
+.grid.sweet .dish:first-child{grid-row:span 2;min-height:560px}
+.grid.sweet .dish{min-height:270px}
+.grid.sweet .note-card{display:flex;flex-direction:column;justify-content:space-between;background:#fff;border-radius:var(--r-md);padding:26px;box-shadow:var(--shadow)}
+.note-card b{font-weight:300;font-size:64px;letter-spacing:-.06em;line-height:1}
+.disclaimer{margin-top:clamp(40px,5vw,56px);font-size:14px;color:var(--ink-2);text-align:center}
+.alt-bg{background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0))}
+
+/* =====================================================================
+   BÔNUS
+   ===================================================================== */
+.bonus-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,36px)}
+.bonus{background:#fff;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .5s var(--ease)}
+.bonus:hover{transform:translateY(-6px)}
+.bonus .media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--dark)}
+.bonus .media img{width:100%;height:100%;object-fit:cover}
+.bonus .badge{position:absolute;left:18px;top:18px;background:#000;color:#fff;border-radius:var(--r-pill);padding:8px 14px;font-size:13px;
+  letter-spacing:.06em;text-transform:uppercase;box-shadow:0 0 0 6px rgba(255,255,255,.3)}
+.bonus .body{padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:14px;flex:1}
+.bonus .incl{margin-top:auto;padding-top:18px;border-top:1px solid var(--hairline);display:flex;align-items:center;gap:10px;font-size:15px}
+.check{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);flex:none}
+.check svg{width:13px;height:13px}
+
+/* =====================================================================
+   RESUMO
+   ===================================================================== */
+.summary{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.stack{position:relative;aspect-ratio:1/1;max-width:520px;width:100%;justify-self:center}
+.stack .s{position:absolute;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-lg);background:#fff}
+.stack .s img{width:100%;height:100%;object-fit:cover}
+.stack .s1{width:58%;aspect-ratio:3/4;left:21%;top:4%;z-index:3;transform:rotate(-3deg)}
+.stack .s2{width:44%;aspect-ratio:4/5;left:0;top:30%;z-index:2;transform:rotate(-9deg)}
+.stack .s3{width:44%;aspect-ratio:4/5;right:0;top:34%;z-index:2;transform:rotate(8deg)}
+.stack .s .cap{position:absolute;left:10px;bottom:10px;background:#fff;border-radius:var(--r-pill);padding:6px 12px;font-size:13px}
+.list{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-direction:column}
+.list li{display:flex;align-items:center;gap:16px;padding:20px 0;border-top:1px solid var(--divider);font-size:clamp(18px,1.8vw,22px);letter-spacing:-.03em}
+.list li:last-child{border-bottom:1px solid var(--divider)}
+.list .num{font:italic 22px/1 var(--serif);color:var(--ink-2);width:34px;flex:none}
+
+/* =====================================================================
+   PARA QUEM É
+   ===================================================================== */
+.who{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.who .card{display:flex;flex-direction:column;gap:40px;min-height:250px;transition:transform .45s var(--ease)}
+.who .card:hover{transform:translateY(-6px) rotate(-1deg)}
+.who .icon{width:56px;height:56px;border-radius:50%;background:#000;color:#fff;display:grid;place-items:center}
+.who .icon svg{width:26px;height:26px}
+.who .card p{margin-top:auto}
+
+/* =====================================================================
+   COMO FUNCIONA
+   ===================================================================== */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.step{position:relative;background:#fff;border-radius:var(--r-md);padding:30px;box-shadow:var(--shadow);min-height:260px;display:flex;flex-direction:column}
+.step .n{font-weight:300;font-size:clamp(56px,6vw,72px);letter-spacing:-.06em;line-height:1;margin-bottom:auto}
+.step:nth-child(2){transform:translateY(24px)}
+.step h3{margin:32px 0 8px}
+
+/* =====================================================================
+   BLOCO DE COMPRA
+   ===================================================================== */
+.buy{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
+.buy > .left{position:relative;background:var(--dark);min-height:420px}
+.buy > .left > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.92}
+.buy > .left::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(200deg,transparent 45%,rgba(0,0,0,.35))}
+/* capa: recorta só o livro do PNG (livro ocupa x 180–845 / y 82–942 de 1024px) e usa o estilo do mockup do hero */
+.buy > .left .cover{position:absolute;left:32px;bottom:24px;z-index:2;width:min(40%,210px);aspect-ratio:665/860;
+  border-radius:4px 10px 10px 4px;overflow:hidden;background:#e9e9e7;transform:rotate(-3deg);transform-origin:left bottom;transition:transform .6s var(--ease);
+  box-shadow:0 0 0 8px rgba(255,255,255,.3),24px 34px 40px rgba(0,0,0,.45)}
+.buy:hover > .left .cover{transform:rotate(-2deg) translateY(-4px)}
+.buy > .left .cover img{position:absolute;width:153.98%;height:119.07%;max-width:none;left:-27.07%;top:-9.53%}
+.buy > .left .cover::before{content:"";position:absolute;inset:0 auto 0 0;width:12px;z-index:2;
+  background:linear-gradient(90deg,rgba(0,0,0,.3),rgba(255,255,255,.25) 45%,rgba(0,0,0,.06))}
+.buy > .left .cover::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(120deg,rgba(255,255,255,.3),transparent 35%)}
+.buy .right{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:22px}
+.buy ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+.buy li{display:flex;gap:12px;align-items:flex-start}
+.buy .price .now{font-size:clamp(56px,6vw,80px)}
+.buy .fine{font-size:13px;color:var(--ink-2)}
+
+/* =====================================================================
+   FAQ (acordeão acessível)
+   ===================================================================== */
+.faq{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border-radius:var(--r-md);box-shadow:var(--ring);overflow:hidden}
+.faq-item h3{margin:0}
+.faq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;background:none;border:0;cursor:pointer;
+  text-align:left;font:400 clamp(18px,1.8vw,21px)/1.3 var(--sans);letter-spacing:-.03em;color:#000}
+.faq-btn .plus{position:relative;width:36px;height:36px;border-radius:50%;background:var(--field);flex:none;transition:background-color .3s,transform .4s var(--ease)}
+.faq-btn .plus::before,.faq-btn .plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;background:var(--accent);
+  transform:translate(-50%,-50%);border-radius:2px;transition:transform .4s var(--ease)}
+.faq-btn .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq-btn[aria-expanded="true"] .plus{background:#000;transform:rotate(180deg)}
+.faq-btn[aria-expanded="true"] .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.faq-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.faq-panel > div{overflow:hidden}
+.faq-panel p{padding:0 24px 24px;color:var(--ink-3);max-width:720px}
+.faq-item.open .faq-panel{grid-template-rows:1fr}
+
+/* =====================================================================
+   CHAMADA FINAL + RODAPÉ (seção preta do DS)
+   ===================================================================== */
+.final{background:#000;color:#fff;border-radius:var(--r-lg) var(--r-lg) 0 0;margin-top:clamp(40px,6vw,80px);padding:clamp(80px,10vw,140px) 0 0;
+  position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(700px 380px at 50% -5%,rgba(255,55,0,.28),transparent 65%),linear-gradient(115deg,transparent 35%,rgba(255,255,255,.05) 48%,transparent 60%)}
+.final .wrap{position:relative}
+.final-cta{text-align:center;max-width:900px;margin:0 auto}
+.final .eyebrow{color:rgba(255,255,255,.6)}
+.final .eyebrow::before,.final .eyebrow::after{background:linear-gradient(90deg,transparent,rgba(255,255,255,.4))}
+.final .lead{color:rgba(255,255,255,.7);margin:22px auto 34px;max-width:620px}
+.final .price{align-items:center;margin-bottom:28px}
+.final .price .old{color:rgba(255,255,255,.55)}
+.final .price .note{color:rgba(255,255,255,.55)}
+.final .btn{box-shadow:0 0 0 8px rgba(255,255,255,.3)}
+.footer{margin-top:clamp(80px,10vw,130px);padding:40px 0 calc(32px + env(safe-area-inset-bottom));border-top:1px solid rgba(255,255,255,.14);
+  display:grid;grid-template-columns:1fr auto;gap:32px 64px;font-size:15px;color:rgba(255,255,255,.7)}
+.footer h2{font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:#fff;margin-bottom:14px;font-weight:500}
+.footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.footer a{text-decoration:none;color:rgba(255,255,255,.8)}
+.footer a:hover{color:var(--accent)}
+.footer .big{font-size:clamp(28px,3vw,40px);letter-spacing:-.05em;color:#fff;margin-bottom:10px}
+.copy{grid-column:1/-1;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:rgba(255,255,255,.5);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.todo{color:#ffb199}
+
+/* barra fixa de compra no mobile */
+.sticky-buy{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;display:none;align-items:center;justify-content:space-between;gap:12px;
+  padding:8px 8px 8px 18px;background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-radius:var(--r-pill);
+  box-shadow:0 0 0 6px rgba(255,255,255,.3),0 14px 30px rgba(0,0,0,.18);transform:translateY(140%);transition:transform .45s var(--ease)}
+.sticky-buy.show{transform:none}
+.sticky-buy .p{line-height:1.1}
+.sticky-buy .p small{display:block;font-size:12px;color:var(--ink-2);text-decoration:line-through}
+.sticky-buy .p b{font-weight:400;font-size:22px;letter-spacing:-.04em}
+
+/* aviso (checkout pendente etc.) */
+.toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom));z-index:60;transform:translate(-50%,20px);opacity:0;pointer-events:none;
+  max-width:min(92vw,520px);background:#000;color:#fff;padding:14px 20px;border-radius:16px;font-size:15px;box-shadow:0 0 0 6px rgba(255,255,255,.3);
+  transition:opacity .3s,transform .4s var(--ease)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.config-flag{position:fixed;right:12px;top:calc(var(--nav-h) + 8px);z-index:45;font-size:12px;padding:6px 10px;border-radius:10px;background:var(--accent);color:#000;font-weight:500}
+
+/* revelação ao rolar (suave, desativada com reduced-motion) */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.no-js .reveal{opacity:1;transform:none}
+
+/* =====================================================================
+   RESPONSIVO
+   ===================================================================== */
+@media (max-width:1100px){
+  .pains{grid-template-columns:repeat(3,1fr)}
+  .who{grid-template-columns:repeat(2,1fr)}
+  .nav-links a{padding:0 14px}
+}
+@media (max-width:960px){
+  .nav-links,.nav-cta .btn{display:none}
+  .menu-btn{display:block}
+  .hero-grid,.summary,.buy{grid-template-columns:1fr}
+  .hero-visual{max-width:520px;order:-1}
+  .hero{padding-top:calc(var(--nav-h) + 12px)}
+  .offer-box{grid-template-columns:1fr;text-align:center}
+  .offer-box .body-2{margin-inline:auto}
+  .grid.savory{grid-template-columns:repeat(2,1fr)}
+  .grid.savory .dish:nth-child(even){transform:translateY(20px)}
+  .grid.sweet{grid-template-columns:1fr 1fr}
+  .grid.sweet .dish:first-child{grid-column:1/-1;grid-row:auto;min-height:380px}
+  .recipes-head{flex-direction:column;align-items:flex-start}
+  .buy > .left{min-height:340px}
+  .buy > .left .cover{width:min(34%,170px)}
+  .footer{grid-template-columns:1fr 1fr}
+  .footer > div:first-child{grid-column:1/-1}
+  .sticky-buy{display:flex}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .pains{grid-template-columns:1fr 1fr;gap:14px}
+  .pain{padding:20px 18px}
+  .pain .q{margin-bottom:22px}
+  .pain p{font-size:16px}
+  .pain:nth-child(even){transform:rotate(2deg) translateY(10px)}
+  .pain:last-child{grid-column:1/-1}
+  .who,.steps,.bonus-grid{grid-template-columns:1fr}
+  .who .card{min-height:0;gap:24px}
+  .step{min-height:0}
+  .step:nth-child(2){transform:none}
+  .grid{gap:14px}
+  .grid.savory .dish{aspect-ratio:3/4.2;min-height:0}
+  .dish figcaption strong{font-size:17px}
+  .grid.sweet .dish{min-height:220px}
+  .btn{width:100%;font-size:14px}
+  .nav .btn{width:auto}
+  .price-row{flex-direction:column;align-items:stretch}
+  .timer .digits{min-width:84px}
+  .timer .sep{font-size:34px}
+  .sticker b{font-size:34px}
+  .footer{grid-template-columns:1fr}
+  .eyebrow{font-size:21px}
+  .eyebrow::before,.eyebrow::after{width:28px}
+}
+@media (max-width:380px){
+  .benefits li{font-size:14px}
+  .brand{font-size:15px}
+  .grid.sweet{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============================ CABEÇALHO ============================ -->
+<header class="nav" id="topo">
+  <div class="wrap">
+    <a class="brand" href="#topo" aria-label="Cozinha Fácil — voltar ao início">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><path d="M6 17h12"/></svg></span>
+      <span data-brand>Cozinha Fácil</span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <ul class="nav-links">
+        <li><a href="#receitas">Receitas</a></li>
+        <li><a href="#bonus">Bônus</a></li>
+        <li><a href="#faq">Perguntas frequentes</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <button type="button" class="btn sm" data-checkout id="btn-nav">Quero minhas receitas<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      <button type="button" class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-panel"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-panel" id="mobile-panel" aria-label="Menu" hidden>
+  <a class="link" href="#receitas">Receitas</a>
+  <a class="link" href="#bonus">Bônus</a>
+  <a class="link" href="#faq">Perguntas frequentes</a>
+  <button type="button" class="btn light block" data-checkout id="btn-mobile-menu">Quero minhas receitas<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+</div>
+
+<main id="conteudo">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill"><span class="dot" aria-hidden="true"></span><span data-product-name>Cozinha Fácil — 30 Receitas para Sua Rotina</span></span>
+      <h1 class="h1" id="hero-title">Mais Sabor no Seu Dia, <span class="tone">Sem Complicar Sua Cozinha!</span></h1>
+      <p class="lead">Descubra 30 receitas doces e salgadas, rápidas e fáceis de preparar, para trazer mais praticidade e variedade à sua rotina.</p>
+      <ul class="benefits">
+        <li><span class="n">15</span>receitas salgadas</li>
+        <li><span class="n">15</span>receitas doces</li>
+        <li><span class="n">+2</span>bônus para facilitar seu dia a dia</li>
+      </ul>
+      <div class="price-row">
+        <div class="price" data-price-block>
+          <span class="old" data-show-when-promo>De <span data-price-old>R$ 47,90</span></span>
+          <span class="now"><small>por</small><span data-price-current>R$ 19,90</span></span>
+          <span class="note">Pagamento único · acesso digital</span>
+        </div>
+        <button type="button" class="btn" data-checkout id="btn-hero">Quero minhas 30 receitas<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-photo">
+        <img src="assets/hero_table.png" alt="Mesa com fatia de torta salgada dourada, prato de macarrão ao molho de tomate com manjericão e bolo de chocolate, sob luz natural" width="1024" height="1024" fetchpriority="high">
+      </div>
+      <div class="mockup">
+        <div class="book"><img src="assets/recipe_cover.png" alt="Capa da coleção de receitas Cozinha Fácil" width="768" height="1024"></div>
+      </div>
+      <div class="sticker" aria-hidden="true"><b>30</b><span>receitas práticas</span></div>
+      <div class="sticker sticker2" aria-hidden="true">
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8S10 3 7.5 3 5 6 7.5 8M12 8s2-5 4.5-5S19 6 16.5 8"/></svg></span>
+        <span><small>Inclui</small><strong>2 bônus especiais</strong></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ OFERTA + CRONÔMETRO ============================ -->
+<section class="offer" aria-labelledby="offer-title">
+  <div class="wrap">
+    <div class="offer-box reveal" id="offer-box">
+      <div>
+        <span class="eyebrow left">Oferta</span>
+        <h2 class="h2" id="offer-title">Condição especial por tempo limitado</h2>
+        <p class="body-2" id="offer-text">Aproveite o preço promocional enquanto esta oferta estiver disponível.</p>
+        <p style="margin-top:18px"><span class="demo-tag" id="demo-tag" hidden>Cronômetro demonstrativo</span></p>
+      </div>
+      <div class="timer-side">
+        <div class="timer" role="timer" aria-live="off" aria-label="Tempo restante da oferta">
+          <div class="unit"><span class="digits" id="t-min">30</span><span class="lbl">minutos</span></div>
+          <span class="sep" aria-hidden="true">:</span>
+          <div class="unit"><span class="digits" id="t-sec">00</span><span class="lbl">segundos</span></div>
+        </div>
+        <p class="sr-only" id="timer-sr" aria-live="polite"></p>
+        <div class="offer-price">
+          <span class="old" data-show-when-promo data-price-old>R$ 47,90</span>
+          <span class="now" data-price-current>R$ 19,90</span>
+        </div>
+        <button type="button" class="btn light" data-checkout id="btn-offer">Quero aproveitar a oferta<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <p class="timer-msg" id="timer-msg" hidden></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ IDENTIFICAÇÃO ============================ -->
+<section class="section" aria-labelledby="pain-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Isso acontece com você?</span>
+      <h2 class="h2" id="pain-title">Quer Preparar Algo Gostoso, <span class="tone">Mas Falta Inspiração?</span></h2>
+    </div>
+    <div class="pains">
+      <div class="pain reveal"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17h.01"/></svg></span><p>Abrir a geladeira e não saber o que preparar.</p></div>
+      <div class="pain reveal"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></span><p>Ter pouco tempo para cozinhar no dia a dia.</p></div>
+      <div class="pain reveal"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 2l4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4M21 13v2a3 3 0 0 1-3 3H3"/></svg></span><p>Querer variar o cardápio e sair da mesmice.</p></div>
+      <div class="pain reveal"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8M4 16s1.5-1 4-1 4 2 6 2 4-1 4-1M2 21h20M7 8v3M12 8v3M17 8v3M7 4h.01M12 4h.01M17 4h.01"/></svg></span><p>Sentir vontade de preparar uma sobremesa.</p></div>
+      <div class="pain reveal"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h12M3 18h7"/><circle cx="18" cy="17" r="3"/></svg></span><p>Ter dúvidas sobre ingredientes e quantidades.</p></div>
+    </div>
+    <p class="closing reveal">Você não precisa ser um chef para começar. <span class="tone">Com receitas práticas e instruções claras, preparar algo gostoso pode ser</span> <em>muito mais simples.</em></p>
+  </div>
+</section>
+
+<!-- ============================ RECEITAS SALGADAS ============================ -->
+<section class="section alt-bg" id="receitas" aria-labelledby="savory-title">
+  <div class="wrap">
+    <div class="recipes-head reveal">
+      <div>
+        <span class="eyebrow left">Salgadas</span>
+        <h2 class="h2" id="savory-title">15 Receitas Salgadas <span class="tone">para Facilitar Sua Rotina</span></h2>
+      </div>
+      <div class="count" aria-hidden="true"><b>15</b><span>opções salgadas</span></div>
+    </div>
+    <div class="grid savory">
+      <figure class="dish reveal"><img src="assets/savory_pie.png" alt="Fatia de torta salgada caseira com recheio de frango e legumes" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Tortas</span><strong>Massas douradas e recheios caseiros</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/savory_pasta.png" alt="Espaguete ao molho de tomate fresco com manjericão e parmesão" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Massas</span><strong>Pratos rápidos para o almoço</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/savory_omelet.png" alt="Omelete de ervas com tomates-cereja e sanduíche tostado sobre tábua de madeira" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Lanches</span><strong>Omeletes e sanduíches práticos</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/savory_pancake.png" alt="Panquecas enroladas com carne moída, molho de tomate e queijo gratinado" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Caseiros</span><strong>Receitas para a família</strong></figcaption></figure>
+    </div>
+    <p class="disclaimer">Imagens meramente ilustrativas do estilo das receitas. <!-- EDITE: substitua pelas fotos e nomes reais das receitas quando a lista definitiva estiver pronta. --></p>
+  </div>
+</section>
+
+<!-- ============================ RECEITAS DOCES ============================ -->
+<section class="section" aria-labelledby="sweet-title">
+  <div class="wrap">
+    <div class="recipes-head reveal">
+      <div>
+        <span class="eyebrow left">Doces</span>
+        <h2 class="h2" id="sweet-title">15 Receitas Doces <span class="tone">para Adoçar Seus Momentos</span></h2>
+      </div>
+      <div class="count" aria-hidden="true"><b>15</b><span>opções doces</span></div>
+    </div>
+    <div class="grid sweet">
+      <figure class="dish reveal"><img src="assets/sweet_cake.png" alt="Fatia de bolo de chocolate úmido com cobertura brilhante" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Bolos</span><strong>Bolos fofinhos para o café da tarde</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/sweet_brigadeiro.png" alt="Brigadeiros com granulado em forminhas de papel" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Docinhos</span><strong>Clássicos que todo mundo ama</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/sweet_brownie.png" alt="Brownies empilhados e cookies com gotas de chocolate" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Assados</span><strong>Brownies e cookies</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/sweet_mousse.png" alt="Mousse de maracujá servida em taças de vidro" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Geladas</span><strong>Sobremesas leves</strong></figcaption></figure>
+      <div class="note-card reveal">
+        <b>+30</b>
+        <p class="body-2">receitas no total, entre doces e salgadas, com passo a passo pensado para a rotina.</p>
+      </div>
+    </div>
+    <p class="disclaimer">Imagens meramente ilustrativas do estilo das receitas.</p>
+  </div>
+</section>
+
+<!-- ============================ BÔNUS ============================ -->
+<section class="section alt-bg" id="bonus" aria-labelledby="bonus-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Incluídos na oferta</span>
+      <h2 class="h2" id="bonus-title">Você Também Recebe <span class="tone">2 Bônus Especiais!</span></h2>
+      <p class="lead">Os dois materiais complementares fazem parte da compra, sem custo adicional.</p>
+    </div>
+    <div class="bonus-grid">
+      <article class="bonus reveal">
+        <div class="media"><img src="assets/bonus_pantry.png" alt="Despensa organizada com potes de vidro de arroz, feijão, massas, farinha e temperos" loading="lazy" width="1024" height="1024"><span class="badge">Bônus 01</span></div>
+        <div class="body">
+          <h3 class="h3">Guia do Que Ter na Despensa</h3>
+          <p class="body-2">Descubra quais alimentos e ingredientes vale a pena manter em casa para facilitar o preparo das refeições e organizar melhor sua rotina culinária.</p>
+          <p class="incl"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Incluído na compra</p>
+        </div>
+      </article>
+      <article class="bonus reveal">
+        <div class="media"><img src="assets/bonus_measures.png" alt="Colheres medidoras, xícaras, balança de cozinha e tigelas com farinha, açúcar e cacau" loading="lazy" width="1024" height="1024"><span class="badge">Bônus 02</span></div>
+        <div class="body">
+          <h3 class="h3">Guia de Medidas e Quantidades</h3>
+          <p class="body-2">Aprenda mais sobre medidas, equivalências e quantidades utilizadas na culinária para seguir as receitas com maior segurança.</p>
+          <p class="incl"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Incluído na compra</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RESUMO ============================ -->
+<section class="section" aria-labelledby="summary-title">
+  <div class="wrap summary">
+    <div class="stack reveal" aria-hidden="true">
+      <div class="s s2"><img src="assets/bonus_pantry.png" alt="" loading="lazy"><span class="cap">Bônus 01</span></div>
+      <div class="s s3"><img src="assets/bonus_measures.png" alt="" loading="lazy"><span class="cap">Bônus 02</span></div>
+      <div class="s s1"><img src="assets/recipe_cover.png" alt="" loading="lazy"></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow left">Resumo</span>
+      <h2 class="h2" id="summary-title">Tudo o Que Você <span class="tone">Vai Receber</span></h2>
+      <ul class="list">
+        <li><span class="num">01</span>15 receitas salgadas</li>
+        <li><span class="num">02</span>15 receitas doces</li>
+        <li><span class="num">03</span>1 guia para organizar os alimentos e ingredientes que vale a pena ter em casa</li>
+        <li><span class="num">04</span>1 guia de medidas e quantidades culinárias</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PARA QUEM É ============================ -->
+<section class="section alt-bg" aria-labelledby="who-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Para quem é</span>
+      <h2 class="h2" id="who-title">Receitas para Quem Quer <span class="tone">Mais Praticidade</span></h2>
+    </div>
+    <div class="who">
+      <article class="card reveal"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9L9.5 8Z"/></svg></span><h3 class="h3">Pessoas que estão começando na cozinha</h3></article>
+      <article class="card reveal"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3 class="h3">Pessoas com pouco tempo para preparar refeições</h3></article>
+      <article class="card reveal"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14ZM20 17v4H6.5"/></svg></span><h3 class="h3">Pessoas que desejam aprender novas preparações</h3></article>
+      <article class="card reveal"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-4.4-9.3-9A5 5 0 0 1 12 6a5 5 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9Z"/></svg></span><h3 class="h3">Pessoas que gostam de explorar doces e salgados</h3></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ COMO FUNCIONA ============================ -->
+<section class="section" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2 class="h2" id="how-title">Começar <span class="tone">É Simples</span></h2>
+    </div>
+    <ol class="steps" style="list-style:none;padding:0;margin:0">
+      <li class="step reveal"><span class="n">1</span><h3 class="h3">Clique no botão de compra</h3><p class="body-2">Escolha qualquer botão da página para ir ao pagamento.</p></li>
+      <li class="step reveal"><span class="n">2</span><h3 class="h3">Finalize o pagamento</h3><p class="body-2">Conclua a compra com segurança pelo checkout da plataforma de pagamento.</p></li>
+      <li class="step reveal"><span class="n">3</span><h3 class="h3">Acesse suas receitas</h3><p class="body-2">Receba o acesso conforme o método de entrega digital da plataforma. <!-- EDITE: descreva aqui o método real de entrega (ex.: e-mail, área de membros). --></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ BLOCO DE COMPRA ============================ -->
+<section class="section" id="comprar" aria-labelledby="buy-title" style="padding-top:clamp(40px,5vw,60px)">
+  <div class="wrap">
+    <div class="buy reveal">
+      <div class="left">
+        <img src="assets/hero_table.png" alt="" loading="lazy" aria-hidden="true">
+      </div>
+      <div class="right">
+        <span class="eyebrow left">Oferta completa</span>
+        <h2 class="h2" id="buy-title" data-product-name>Cozinha Fácil — 30 Receitas para Sua Rotina</h2>
+        <ul>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Coleção com 30 receitas: 15 salgadas e 15 doces</li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Bônus 01 — Guia do Que Ter na Despensa</li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Bônus 02 — Guia de Medidas e Quantidades</li>
+        </ul>
+        <div class="price">
+          <span class="old" data-show-when-promo>De <span data-price-old>R$ 47,90</span></span>
+          <span class="now"><small>por</small><span data-price-current>R$ 19,90</span></span>
+        </div>
+        <button type="button" class="btn block" data-checkout id="btn-buy"><span data-cta-price>Quero minhas receitas por R$ 19,90</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <!-- EDITE: inclua formas de pagamento, prazo de entrega e política de reembolso SOMENTE quando forem condições reais. -->
+        <p class="fine">Pagamento processado pela plataforma de checkout configurada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section" id="faq" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Dúvidas</span>
+      <h2 class="h2" id="faq-title">Perguntas <span class="tone">Frequentes</span></h2>
+    </div>
+    <!-- EDITE: ajuste as respostas conforme as condições reais do produto. -->
+    <div class="faq" id="faq-list">
+      <div class="faq-item"><h3><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-b1">Preciso ter experiência na cozinha?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-1" role="region" aria-labelledby="faq-b1"><div><p>Não. As receitas foram pensadas para quem está começando ou tem pouco tempo, com ingredientes acessíveis e instruções claras.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-b2">O que está incluído na compra?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-2" role="region" aria-labelledby="faq-b2"><div><p>Uma coleção com 30 receitas (15 salgadas e 15 doces) e dois bônus: o Guia do Que Ter na Despensa e o Guia de Medidas e Quantidades.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-b3">Quais são os dois bônus?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-3" role="region" aria-labelledby="faq-b3"><div><p>Bônus 01: um guia sobre alimentos, ingredientes e itens úteis para manter em casa. Bônus 02: um guia de medidas, equivalências e quantidades usadas na culinária.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-b4">Como receberei o material?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-4" role="region" aria-labelledby="faq-b4"><div><p>O material é digital e o acesso é liberado conforme o método de entrega da plataforma de pagamento. <span class="todo">[EDITE: informe o método e o prazo reais de entrega.]</span></p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-b5">Como faço para comprar?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-5" role="region" aria-labelledby="faq-b5"><div><p>Clique em qualquer botão de compra desta página. Você será direcionado ao checkout para concluir o pagamento.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-b6">Qual é a duração da oferta promocional?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-6" role="region" aria-labelledby="faq-b6"><div><p id="faq-offer-answer">O preço promocional de R$ 19,90 vale enquanto esta oferta estiver disponível. <span class="todo">[EDITE: informe a duração real da condição promocional.]</span></p></div></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ CHAMADA FINAL + RODAPÉ ============================ -->
+<div class="final">
+  <div class="wrap">
+    <section class="final-cta reveal" aria-labelledby="final-title">
+      <span class="eyebrow">Comece hoje</span>
+      <h2 class="h2" id="final-title" style="font-size:clamp(36px,5.6vw,72px)">Sua Próxima Receita Favorita Pode Começar Aqui!</h2>
+      <p class="lead">Descubra novas ideias para preparar doces e salgados e torne sua rotina na cozinha mais prática.</p>
+      <div class="price">
+        <span class="old" data-show-when-promo>De <span data-price-old>R$ 47,90</span></span>
+        <span class="now"><small>por</small><span data-price-current>R$ 19,90</span></span>
+      </div>
+      <button type="button" class="btn light" data-checkout id="btn-final"><span data-cta-price>Garantir minhas receitas por R$ 19,90</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+    </section>
+
+    <!-- EDITE: preencha os dados reais da marca, contato e links legais. Não publique com os marcadores [EDITE]. -->
+    <footer class="footer">
+      <div>
+        <p class="big" data-brand>Cozinha Fácil</p>
+        <p>Receitas práticas para deixar sua rotina mais saborosa.</p>
+      </div>
+      <div>
+        <h2>Informações</h2>
+        <ul>
+          <li><a href="#" data-legal="privacidade">Política de privacidade</a></li>
+          <li><a href="#" data-legal="termos">Termos de uso</a></li>
+          <li><a href="#" data-legal="reembolso">Política de reembolso</a></li>
+        </ul>
+      </div>
+      <p class="copy"><span>© <span id="year">2026</span> <span data-brand>Cozinha Fácil</span>. Todos os direitos reservados.</span></p>
+    </footer>
+  </div>
+</div>
+
+<!-- barra de compra fixa (mobile) -->
+<div class="sticky-buy" id="sticky-buy" aria-hidden="true">
+  <div class="p"><small data-show-when-promo data-price-old>R$ 47,90</small><b data-price-current>R$ 19,90</b></div>
+  <button type="button" class="btn sm" data-checkout id="btn-sticky" tabindex="-1" style="width:auto">Quero minhas receitas<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =====================================================================
+   CONFIGURAÇÕES — EDITE AQUI
+   ===================================================================== */
+
+// Link do checkout. TODOS os botões de compra usam esta única variável.
+const CHECKOUT_URL = "https://pay.cakto.com.br/3ad4c27_1210477";
+
+// (Opcional) Checkout com preço cheio, usado SOMENTE se OFFER_EXPIRES_FOR_REAL = true
+// e o cronômetro chegar a zero. Deixe vazio se não existir.
+const CHECKOUT_URL_FULL_PRICE = "";
+
+const CONFIG = {
+  productName: "Cozinha Fácil — 30 Receitas para Sua Rotina", // nome completo do produto
+  brandName: "Cozinha Fácil",                                  // nome curto/marca
+  priceOld: "R$ 47,90",     // preço de referência (use apenas se for uma condição comercial real)
+  priceCurrent: "R$ 19,90", // preço promocional
+  showOldPrice: true,       // false oculta o preço riscado
+
+  // ---- Cronômetro ----
+  offerMinutes: 30,         // duração do cronômetro em minutos
+  storageKey: "cf_offer_end_v1",
+  /*
+   * OFFER_EXPIRES_FOR_REAL
+   *  false (padrão) → cronômetro DEMONSTRATIVO. Ao zerar, apenas informa que a contagem
+   *                    terminou; o preço e o checkout não mudam e o site não afirma
+   *                    que o visitante perdeu o desconto.
+   *  true            → ao zerar, o preço promocional deixa de ser exibido e os botões
+   *                    passam a usar CHECKOUT_URL_FULL_PRICE (ou ficam indisponíveis).
+   *                    ATENÇÃO: isso é apenas visual. A validação real precisa ser feita
+   *                    na plataforma de checkout/servidor (ex.: cupom ou oferta com validade).
+   */
+  OFFER_EXPIRES_FOR_REAL: false
+};
+
+/* =====================================================================
+   APLICAÇÃO
+   ===================================================================== */
+(function () {
+  "use strict";
+  document.body.classList.remove("no-js");
+
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+  const isConfigured = (url) => typeof url === "string" && /^https?:\/\//i.test(url) && !url.includes("COLOQUE_AQUI");
+
+  let offerExpired = false;
+
+  /* ---------- toast ---------- */
+  const toast = $("#toast");
+  let toastTimer;
+  function notify(msg) {
+    toast.textContent = msg;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("show"), 4200);
+  }
+
+  /* ---------- textos configuráveis ---------- */
+  function applyConfig() {
+    $$("[data-product-name]").forEach((el) => (el.textContent = CONFIG.productName));
+    $$("[data-brand]").forEach((el) => (el.textContent = CONFIG.brandName));
+    $$("[data-price-old]").forEach((el) => (el.textContent = CONFIG.priceOld));
+    $$("[data-price-current]").forEach((el) => (el.textContent = CONFIG.priceCurrent));
+    $$("#btn-buy [data-cta-price]").forEach((el) => (el.textContent = "Quero minhas receitas por " + CONFIG.priceCurrent));
+    $$("#btn-final [data-cta-price]").forEach((el) => (el.textContent = "Garantir minhas receitas por " + CONFIG.priceCurrent));
+    if (!CONFIG.showOldPrice) $$("[data-show-when-promo]").forEach((el) => (el.hidden = true));
+    const y = $("#year"); if (y) y.textContent = new Date().getFullYear();
+  }
+
+  /* ---------- checkout ---------- */
+  function currentCheckout() {
+    if (CONFIG.OFFER_EXPIRES_FOR_REAL && offerExpired) return CHECKOUT_URL_FULL_PRICE;
+    return CHECKOUT_URL;
+  }
+  function goToCheckout(e) {
+    e.preventDefault();
+    const url = currentCheckout();
+    if (!isConfigured(url)) {
+      notify(CONFIG.OFFER_EXPIRES_FOR_REAL && offerExpired
+        ? "A condição promocional foi encerrada e não há checkout de preço cheio configurado."
+        : "Checkout ainda não configurado. Defina CHECKOUT_URL no código para ativar a compra.");
+      console.warn("[Cozinha Fácil] Configuração pendente: CHECKOUT_URL não definido.");
+      return;
+    }
+    try { window.location.href = url; }
+    catch (err) { console.error(err); notify("Não foi possível abrir o checkout. Tente novamente."); }
+  }
+  $$("[data-checkout]").forEach((b) => b.addEventListener("click", goToCheckout));
+
+  if (!isConfigured(CHECKOUT_URL)) {
+    const flag = document.createElement("div");
+    flag.className = "config-flag";
+    flag.textContent = "Checkout pendente de configuração";
+    flag.setAttribute("role", "note");
+    document.body.appendChild(flag);
+  }
+
+  /* links legais ainda não definidos */
+  $$("[data-legal]").forEach((a) =>
+    a.addEventListener("click", (e) => {
+      if (a.getAttribute("href") === "#") { e.preventDefault(); notify("Página ainda não configurada. Adicione o link real no rodapé."); }
+    })
+  );
+
+  /* ---------- cabeçalho / menu mobile ---------- */
+  const nav = $(".nav"), menuBtn = $("#menu-btn"), panel = $("#mobile-panel");
+  function setMenu(open) {
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    if (open) { panel.hidden = false; requestAnimationFrame(() => panel.classList.add("open")); $("a", panel).focus(); }
+    else { panel.classList.remove("open"); setTimeout(() => { if (!panel.classList.contains("open")) panel.hidden = true; }, 350); }
+  }
+  menuBtn.addEventListener("click", () => setMenu(menuBtn.getAttribute("aria-expanded") !== "true"));
+  $$("a", panel).forEach((a) => a.addEventListener("click", () => setMenu(false)));
+  $$("[data-checkout]", panel).forEach((b) => b.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && menuBtn.getAttribute("aria-expanded") === "true") { setMenu(false); menuBtn.focus(); }
+  });
+  window.matchMedia("(min-width: 961px)").addEventListener?.("change", (m) => { if (m.matches) setMenu(false); });
+
+  const sticky = $("#sticky-buy"), stickyBtn = $("#btn-sticky"), heroEl = $(".hero"), buyEl = $("#comprar");
+  function onScroll() {
+    nav.classList.toggle("scrolled", window.scrollY > 12);
+    const pastHero = heroEl.getBoundingClientRect().bottom < 0;
+    const r = buyEl.getBoundingClientRect();
+    const buyVisible = r.top < window.innerHeight && r.bottom > 0;
+    const nearEnd = window.innerHeight + window.scrollY > document.body.scrollHeight - 700;
+    const show = pastHero && !buyVisible && !nearEnd;
+    sticky.classList.toggle("show", show);
+    sticky.setAttribute("aria-hidden", String(!show));
+    stickyBtn.tabIndex = show ? 0 : -1;
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- FAQ ---------- */
+  $$(".faq-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const item = btn.closest(".faq-item");
+      const open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!open));
+      item.classList.toggle("open", !open);
+    });
+  });
+
+  /* ---------- revelação ao rolar ---------- */
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if ("IntersectionObserver" in window && !reduce) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    $$(".reveal").forEach((el) => io.observe(el));
+  } else {
+    $$(".reveal").forEach((el) => el.classList.add("in"));
+  }
+
+  /* ---------- imagens: fallback se algum arquivo faltar ---------- */
+  $$("img").forEach((img) => img.addEventListener("error", () => {
+    img.style.visibility = "hidden";
+    const box = img.parentElement; if (box) box.style.background = "linear-gradient(135deg,#bdbdbd,#8a8a8a)";
+  }, { once: true }));
+
+  /* =====================================================================
+     CRONÔMETRO
+     Calcula o tempo restante a partir de um horário final salvo em
+     localStorage (persiste entre recargas no mesmo navegador).
+     Não depende da contagem de chamadas do setInterval.
+     ===================================================================== */
+  const elMin = $("#t-min"), elSec = $("#t-sec"), msg = $("#timer-msg"), sr = $("#timer-sr"), box = $("#offer-box");
+  const DURATION = Math.max(1, Number(CONFIG.offerMinutes) || 30) * 60 * 1000;
+  let tick = null;
+
+  function storageGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function storageSet(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* modo privado / bloqueado */ } }
+
+  function getEndTime() {
+    const saved = parseInt(storageGet(CONFIG.storageKey), 10);
+    if (Number.isFinite(saved) && saved > 0 && saved - Date.now() <= DURATION) return saved;
+    const end = Date.now() + DURATION;
+    storageSet(CONFIG.storageKey, String(end));
+    return end;
+  }
+  const endTime = getEndTime();
+  const pad = (n) => String(n).padStart(2, "0");
+  let lastSrMinute = null;
+
+  function render() {
+    const left = Math.max(0, endTime - Date.now());
+    const totalSec = Math.ceil(left / 1000);
+    const m = Math.floor(totalSec / 60), s = totalSec % 60;
+    elMin.textContent = pad(m);
+    elSec.textContent = pad(s);
+    if (m !== lastSrMinute) { lastSrMinute = m; sr.textContent = m > 0 ? `Restam cerca de ${m} minutos.` : ""; }
+    if (left <= 0) { finish(); return false; }
+    return true;
+  }
+
+  function finish() {
+    if (tick) { clearInterval(tick); tick = null; }
+    offerExpired = true;
+    elMin.textContent = "00"; elSec.textContent = "00";
+    box.classList.add("is-expired");
+    msg.hidden = false;
+    if (CONFIG.OFFER_EXPIRES_FOR_REAL) {
+      $("#offer-title").textContent = "Condição promocional encerrada";
+      $("#offer-text").textContent = "O período desta condição especial terminou.";
+      msg.textContent = "O preço promocional não está mais disponível neste navegador.";
+      $$("[data-show-when-promo]").forEach((el) => (el.hidden = true));
+      $$("[data-price-current]").forEach((el) => (el.textContent = CONFIG.priceOld));
+      $$("[data-cta-price]").forEach((el) => (el.textContent = "Quero minhas receitas"));
+      if (!isConfigured(CHECKOUT_URL_FULL_PRICE)) $$("[data-checkout]").forEach((b) => b.setAttribute("aria-disabled", "true"));
+      sr.textContent = "A condição promocional foi encerrada.";
+    } else {
+      // Modo demonstrativo: não altera preço nem afirma perda do desconto.
+      msg.textContent = "A contagem demonstrativa chegou ao fim. Consulte as condições vigentes no checkout.";
+      sr.textContent = "A contagem chegou ao fim.";
+    }
+  }
+
+  if (!CONFIG.OFFER_EXPIRES_FOR_REAL) $("#demo-tag").hidden = false;
+  if (render()) {
+    tick = setInterval(render, 250);
+    document.addEventListener("visibilitychange", () => { if (!document.hidden && tick) render(); });
+  }
+
+  applyConfig();
+  if (offerExpired && CONFIG.OFFER_EXPIRES_FOR_REAL) finish(); // reaplica após applyConfig
+
+  // Utilitário de teste no console: CozinhaFacil.resetTimer() ou CozinhaFacil.expireIn(5)
+  window.CozinhaFacil = {
+    resetTimer() { try { localStorage.removeItem(CONFIG.storageKey); } catch (e) {} location.reload(); },
+    expireIn(sec) { storageSet(CONFIG.storageKey, String(Date.now() + sec * 1000)); location.reload(); }
+  };
+})();
+</script>
+</body>
+</html>
