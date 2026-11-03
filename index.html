@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cozinha Fácil | 30 Receitas Doces e Salgadas</title>
+<meta name="description" content="Descubra 30 receitas doces e salgadas práticas, com dois bônus para ajudar você a organizar sua cozinha e acertar as medidas.">
+<meta name="theme-color" content="#d9d9d9">
+<meta property="og:title" content="Cozinha Fácil | 30 Receitas Doces e Salgadas">
+<meta property="og:description" content="30 receitas doces e salgadas práticas + 2 bônus para organizar sua cozinha e acertar as medidas.">
+<meta property="og:image" content="assets/img/hero_table.webp">
+<!-- Fontes externas (Google Fonts). Se falharem, o site usa as fontes do sistema. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="no-js">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ============================ CABEÇALHO ============================ -->
+<header class="nav" id="topo">
+  <div class="wrap">
+    <a class="brand" href="#topo" aria-label="Cozinha Fácil — voltar ao início">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><path d="M6 17h12"/></svg></span>
+      <span data-brand>Cozinha Fácil</span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <ul class="nav-links">
+        <li><a href="#receitas">Receitas</a></li>
+        <li><a href="#bonus">Bônus</a></li>
+        <li><a href="#faq">Perguntas frequentes</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <button type="button" class="btn sm" data-checkout id="btn-nav">Quero minhas receitas<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      <button type="button" class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-panel"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-panel" id="mobile-panel" aria-label="Menu" hidden>
+  <a class="link" href="#receitas">Receitas</a>
+  <a class="link" href="#bonus">Bônus</a>
+  <a class="link" href="#faq">Perguntas frequentes</a>
+  <button type="button" class="btn light block" data-checkout id="btn-mobile-menu">Quero minhas receitas<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+</div>
+
+<main id="conteudo">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill"><span class="dot" aria-hidden="true"></span><span data-product-name>Cozinha Fácil — 30 Receitas para Sua Rotina</span></span>
+      <h1 class="h1" id="hero-title">Mais Sabor no Seu Dia, <span class="tone">Sem Complicar Sua Cozinha!</span></h1>
+      <p class="lead">Descubra 30 receitas doces e salgadas, rápidas e fáceis de preparar, para trazer mais praticidade e variedade à sua rotina.</p>
+      <ul class="benefits">
+        <li><span class="n">15</span>receitas salgadas</li>
+        <li><span class="n">15</span>receitas doces</li>
+        <li><span class="n">+2</span>bônus para facilitar seu dia a dia</li>
+      </ul>
+      <div class="price-row">
+        <div class="price" data-price-block>
+          <span class="old" data-show-when-promo>De <span data-price-old>R$ 47,90</span></span>
+          <span class="now"><small>por</small><span data-price-current>R$ 19,90</span></span>
+          <span class="note">Pagamento único · acesso digital</span>
+        </div>
+        <button type="button" class="btn" data-checkout id="btn-hero">Quero minhas 30 receitas<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-photo">
+        <img src="assets/img/hero_table.webp" alt="Mesa com fatia de torta salgada dourada, prato de macarrão ao molho de tomate com manjericão e bolo de chocolate, sob luz natural" width="1024" height="1024" fetchpriority="high">
+      </div>
+      <div class="mockup">
+        <div class="book"><img src="assets/img/recipe_cover.webp" alt="Capa da coleção de receitas Cozinha Fácil" width="768" height="1024"></div>
+      </div>
+      <div class="sticker" aria-hidden="true"><b>30</b><span>receitas práticas</span></div>
+      <div class="sticker sticker2" aria-hidden="true">
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8S10 3 7.5 3 5 6 7.5 8M12 8s2-5 4.5-5S19 6 16.5 8"/></svg></span>
+        <span><small>Inclui</small><strong>2 bônus especiais</strong></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ OFERTA + CRONÔMETRO ============================ -->
+<section class="offer" aria-labelledby="offer-title">
+  <div class="wrap">
+    <div class="offer-box reveal" id="offer-box">
+      <div>
+        <span class="eyebrow left">Oferta</span>
+        <h2 class="h2" id="offer-title">Condição especial por tempo limitado</h2>
+        <p class="body-2" id="offer-text">Aproveite o preço promocional enquanto esta oferta estiver disponível.</p>
+        <p style="margin-top:18px"><span class="demo-tag" id="demo-tag" hidden>Cronômetro demonstrativo</span></p>
+      </div>
+      <div class="timer-side">
+        <div class="timer" role="timer" aria-live="off" aria-label="Tempo restante da oferta">
+          <div class="unit"><span class="digits" id="t-min">30</span><span class="lbl">minutos</span></div>
+          <span class="sep" aria-hidden="true">:</span>
+          <div class="unit"><span class="digits" id="t-sec">00</span><span class="lbl">segundos</span></div>
+        </div>
+        <p class="sr-only" id="timer-sr" aria-live="polite"></p>
+        <div class="offer-price">
+          <span class="old" data-show-when-promo data-price-old>R$ 47,90</span>
+          <span class="now" data-price-current>R$ 19,90</span>
+        </div>
+        <button type="button" class="btn light" data-checkout id="btn-offer">Quero aproveitar a oferta<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <p class="timer-msg" id="timer-msg" hidden></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ IDENTIFICAÇÃO ============================ -->
+<section class="section" aria-labelledby="pain-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Isso acontece com você?</span>
+      <h2 class="h2" id="pain-title">Quer Preparar Algo Gostoso, <span class="tone">Mas Falta Inspiração?</span></h2>
+    </div>
+    <div class="pains">
+      <div class="pain reveal"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17h.01"/></svg></span><p>Abrir a geladeira e não saber o que preparar.</p></div>
+      <div class="pain reveal"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></svg></span><p>Ter pouco tempo para cozinhar no dia a dia.</p></div>
+      <div class="pain reveal"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 2l4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4M21 13v2a3 3 0 0 1-3 3H3"/></svg></span><p>Querer variar o cardápio e sair da mesmice.</p></div>
+      <div class="pain reveal"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8M4 16s1.5-1 4-1 4 2 6 2 4-1 4-1M2 21h20M7 8v3M12 8v3M17 8v3M7 4h.01M12 4h.01M17 4h.01"/></svg></span><p>Sentir vontade de preparar uma sobremesa.</p></div>
+      <div class="pain reveal"><span class="q" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h12M3 18h7"/><circle cx="18" cy="17" r="3"/></svg></span><p>Ter dúvidas sobre ingredientes e quantidades.</p></div>
+    </div>
+    <p class="closing reveal">Você não precisa ser um chef para começar. <span class="tone">Com receitas práticas e instruções claras, preparar algo gostoso pode ser</span> <em>muito mais simples.</em></p>
+  </div>
+</section>
+
+<!-- ============================ RECEITAS SALGADAS ============================ -->
+<section class="section alt-bg" id="receitas" aria-labelledby="savory-title">
+  <div class="wrap">
+    <div class="recipes-head reveal">
+      <div>
+        <span class="eyebrow left">Salgadas</span>
+        <h2 class="h2" id="savory-title">15 Receitas Salgadas <span class="tone">para Facilitar Sua Rotina</span></h2>
+      </div>
+      <div class="count" aria-hidden="true"><b>15</b><span>opções salgadas</span></div>
+    </div>
+    <div class="grid savory">
+      <figure class="dish reveal"><img src="assets/img/savory_pie.webp" alt="Fatia de torta salgada caseira com recheio de frango e legumes" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Tortas</span><strong>Massas douradas e recheios caseiros</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/img/savory_pasta.webp" alt="Espaguete ao molho de tomate fresco com manjericão e parmesão" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Massas</span><strong>Pratos rápidos para o almoço</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/img/savory_omelet.webp" alt="Omelete de ervas com tomates-cereja e sanduíche tostado sobre tábua de madeira" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Lanches</span><strong>Omeletes e sanduíches práticos</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/img/savory_pancake.webp" alt="Panquecas enroladas com carne moída, molho de tomate e queijo gratinado" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Caseiros</span><strong>Receitas para a família</strong></figcaption></figure>
+    </div>
+    <p class="disclaimer">Imagens meramente ilustrativas do estilo das receitas. <!-- EDITE: substitua pelas fotos e nomes reais das receitas quando a lista definitiva estiver pronta. --></p>
+  </div>
+</section>
+
+<!-- ============================ RECEITAS DOCES ============================ -->
+<section class="section" aria-labelledby="sweet-title">
+  <div class="wrap">
+    <div class="recipes-head reveal">
+      <div>
+        <span class="eyebrow left">Doces</span>
+        <h2 class="h2" id="sweet-title">15 Receitas Doces <span class="tone">para Adoçar Seus Momentos</span></h2>
+      </div>
+      <div class="count" aria-hidden="true"><b>15</b><span>opções doces</span></div>
+    </div>
+    <div class="grid sweet">
+      <figure class="dish reveal"><img src="assets/img/sweet_cake.webp" alt="Fatia de bolo de chocolate úmido com cobertura brilhante" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Bolos</span><strong>Bolos fofinhos para o café da tarde</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/img/sweet_brigadeiro.webp" alt="Brigadeiros com granulado em forminhas de papel" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Docinhos</span><strong>Clássicos que todo mundo ama</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/img/sweet_brownie.webp" alt="Brownies empilhados e cookies com gotas de chocolate" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Assados</span><strong>Brownies e cookies</strong></figcaption></figure>
+      <figure class="dish reveal"><img src="assets/img/sweet_mousse.webp" alt="Mousse de maracujá servida em taças de vidro" loading="lazy" width="1024" height="1024"><figcaption><span class="tag">Geladas</span><strong>Sobremesas leves</strong></figcaption></figure>
+      <div class="note-card reveal">
+        <b>+30</b>
+        <p class="body-2">receitas no total, entre doces e salgadas, com passo a passo pensado para a rotina.</p>
+      </div>
+    </div>
+    <p class="disclaimer">Imagens meramente ilustrativas do estilo das receitas.</p>
+  </div>
+</section>
+
+<!-- ============================ BÔNUS ============================ -->
+<section class="section alt-bg" id="bonus" aria-labelledby="bonus-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Incluídos na oferta</span>
+      <h2 class="h2" id="bonus-title">Você Também Recebe <span class="tone">2 Bônus Especiais!</span></h2>
+      <p class="lead">Os dois materiais complementares fazem parte da compra, sem custo adicional.</p>
+    </div>
+    <div class="bonus-grid">
+      <article class="bonus reveal">
+        <div class="media"><img src="assets/img/bonus_pantry.webp" alt="Despensa organizada com potes de vidro de arroz, feijão, massas, farinha e temperos" loading="lazy" width="1024" height="1024"><span class="badge">Bônus 01</span></div>
+        <div class="body">
+          <h3 class="h3">Guia do Que Ter na Despensa</h3>
+          <p class="body-2">Descubra quais alimentos e ingredientes vale a pena manter em casa para facilitar o preparo das refeições e organizar melhor sua rotina culinária.</p>
+          <p class="incl"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Incluído na compra</p>
+        </div>
+      </article>
+      <article class="bonus reveal">
+        <div class="media"><img src="assets/img/bonus_measures.webp" alt="Colheres medidoras, xícaras, balança de cozinha e tigelas com farinha, açúcar e cacau" loading="lazy" width="1024" height="1024"><span class="badge">Bônus 02</span></div>
+        <div class="body">
+          <h3 class="h3">Guia de Medidas e Quantidades</h3>
+          <p class="body-2">Aprenda mais sobre medidas, equivalências e quantidades utilizadas na culinária para seguir as receitas com maior segurança.</p>
+          <p class="incl"><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Incluído na compra</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RESUMO ============================ -->
+<section class="section" aria-labelledby="summary-title">
+  <div class="wrap summary">
+    <div class="stack reveal" aria-hidden="true">
+      <div class="s s2"><img src="assets/img/bonus_pantry.webp" alt="" loading="lazy"><span class="cap">Bônus 01</span></div>
+      <div class="s s3"><img src="assets/img/bonus_measures.webp" alt="" loading="lazy"><span class="cap">Bônus 02</span></div>
+      <div class="s s1"><img src="assets/img/recipe_cover.webp" alt="" loading="lazy"></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow left">Resumo</span>
+      <h2 class="h2" id="summary-title">Tudo o Que Você <span class="tone">Vai Receber</span></h2>
+      <ul class="list">
+        <li><span class="num">01</span>15 receitas salgadas</li>
+        <li><span class="num">02</span>15 receitas doces</li>
+        <li><span class="num">03</span>1 guia para organizar os alimentos e ingredientes que vale a pena ter em casa</li>
+        <li><span class="num">04</span>1 guia de medidas e quantidades culinárias</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PARA QUEM É ============================ -->
+<section class="section alt-bg" aria-labelledby="who-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Para quem é</span>
+      <h2 class="h2" id="who-title">Receitas para Quem Quer <span class="tone">Mais Praticidade</span></h2>
+    </div>
+    <div class="who">
+      <article class="card reveal"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9L9.5 8Z"/></svg></span><h3 class="h3">Pessoas que estão começando na cozinha</h3></article>
+      <article class="card reveal"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3 class="h3">Pessoas com pouco tempo para preparar refeições</h3></article>
+      <article class="card reveal"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14ZM20 17v4H6.5"/></svg></span><h3 class="h3">Pessoas que desejam aprender novas preparações</h3></article>
+      <article class="card reveal"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-4.4-9.3-9A5 5 0 0 1 12 6a5 5 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9Z"/></svg></span><h3 class="h3">Pessoas que gostam de explorar doces e salgados</h3></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ COMO FUNCIONA ============================ -->
+<section class="section" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2 class="h2" id="how-title">Começar <span class="tone">É Simples</span></h2>
+    </div>
+    <ol class="steps" style="list-style:none;padding:0;margin:0">
+      <li class="step reveal"><span class="n">1</span><h3 class="h3">Clique no botão de compra</h3><p class="body-2">Escolha qualquer botão da página para ir ao pagamento.</p></li>
+      <li class="step reveal"><span class="n">2</span><h3 class="h3">Finalize o pagamento</h3><p class="body-2">Conclua a compra com segurança pelo checkout da plataforma de pagamento.</p></li>
+      <li class="step reveal"><span class="n">3</span><h3 class="h3">Acesse suas receitas</h3><p class="body-2">Receba o acesso conforme o método de entrega digital da plataforma. <!-- EDITE: descreva aqui o método real de entrega (ex.: e-mail, área de membros). --></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ BLOCO DE COMPRA ============================ -->
+<section class="section" id="comprar" aria-labelledby="buy-title" style="padding-top:clamp(40px,5vw,60px)">
+  <div class="wrap">
+    <div class="buy reveal">
+      <div class="left">
+        <img src="assets/img/hero_table.webp" alt="" loading="lazy" aria-hidden="true">
+      </div>
+      <div class="right">
+        <span class="eyebrow left">Oferta completa</span>
+        <h2 class="h2" id="buy-title" data-product-name>Cozinha Fácil — 30 Receitas para Sua Rotina</h2>
+        <ul>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Coleção com 30 receitas: 15 salgadas e 15 doces</li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Bônus 01 — Guia do Que Ter na Despensa</li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg></span>Bônus 02 — Guia de Medidas e Quantidades</li>
+        </ul>
+        <div class="price">
+          <span class="old" data-show-when-promo>De <span data-price-old>R$ 47,90</span></span>
+          <span class="now"><small>por</small><span data-price-current>R$ 19,90</span></span>
+        </div>
+        <button type="button" class="btn block" data-checkout id="btn-buy"><span data-cta-price>Quero minhas receitas por R$ 19,90</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <!-- EDITE: inclua formas de pagamento, prazo de entrega e política de reembolso SOMENTE quando forem condições reais. -->
+        <p class="fine">Pagamento processado pela plataforma de checkout configurada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section class="section" id="faq" aria-labelledby="faq-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Dúvidas</span>
+      <h2 class="h2" id="faq-title">Perguntas <span class="tone">Frequentes</span></h2>
+    </div>
+    <!-- EDITE: ajuste as respostas conforme as condições reais do produto. -->
+    <div class="faq" id="faq-list">
+      <div class="faq-item"><h3><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-b1">Preciso ter experiência na cozinha?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-1" role="region" aria-labelledby="faq-b1"><div><p>Não. As receitas foram pensadas para quem está começando ou tem pouco tempo, com ingredientes acessíveis e instruções claras.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-b2">O que está incluído na compra?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-2" role="region" aria-labelledby="faq-b2"><div><p>Uma coleção com 30 receitas (15 salgadas e 15 doces) e dois bônus: o Guia do Que Ter na Despensa e o Guia de Medidas e Quantidades.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-b3">Quais são os dois bônus?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-3" role="region" aria-labelledby="faq-b3"><div><p>Bônus 01: um guia sobre alimentos, ingredientes e itens úteis para manter em casa. Bônus 02: um guia de medidas, equivalências e quantidades usadas na culinária.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-b4">Como receberei o material?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-4" role="region" aria-labelledby="faq-b4"><div><p>Você receberá um link no seu e-mail.</p></div></div></div>
+      <div class="faq-item"><h3><button class="faq-btn" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-b5">Como faço para comprar?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-panel" id="faq-5" role="region" aria-labelledby="faq-b5"><div><p>Clique em qualquer botão de compra desta página. Você será direcionado ao checkout para concluir o pagamento.</p></div></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ CHAMADA FINAL + RODAPÉ ============================ -->
+<div class="final">
+  <div class="wrap">
+    <section class="final-cta reveal" aria-labelledby="final-title">
+      <span class="eyebrow">Comece hoje</span>
+      <h2 class="h2" id="final-title" style="font-size:clamp(36px,5.6vw,72px)">Sua Próxima Receita Favorita Pode Começar Aqui!</h2>
+      <p class="lead">Descubra novas ideias para preparar doces e salgados e torne sua rotina na cozinha mais prática.</p>
+      <div class="price">
+        <span class="old" data-show-when-promo>De <span data-price-old>R$ 47,90</span></span>
+        <span class="now"><small>por</small><span data-price-current>R$ 19,90</span></span>
+      </div>
+      <button type="button" class="btn light" data-checkout id="btn-final"><span data-cta-price>Garantir minhas receitas por R$ 19,90</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+    </section>
+
+    <!-- EDITE: preencha os dados reais da marca, contato e links legais. Não publique com os marcadores [EDITE]. -->
+    <footer class="footer">
+      <div>
+        <p class="big" data-brand>Cozinha Fácil</p>
+        <p>Receitas práticas para deixar sua rotina mais saborosa.</p>
+      </div>
+      <div>
+        <h2>Informações</h2>
+        <ul>
+          <li><a href="#" data-legal="privacidade">Política de privacidade</a></li>
+          <li><a href="#" data-legal="termos">Termos de uso</a></li>
+          <li><a href="#" data-legal="reembolso">Política de reembolso</a></li>
+        </ul>
+      </div>
+      <p class="copy"><span>© <span id="year">2026</span> <span data-brand>Cozinha Fácil</span>. Todos os direitos reservados.</span></p>
+    </footer>
+  </div>
+</div>
+
+<!-- barra de compra fixa (mobile) -->
+<div class="sticky-buy" id="sticky-buy" aria-hidden="true">
+  <div class="p"><small data-show-when-promo data-price-old>R$ 47,90</small><b data-price-current>R$ 19,90</b></div>
+  <button type="button" class="btn sm" data-checkout id="btn-sticky" tabindex="-1" style="width:auto">Quero minhas receitas<span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
